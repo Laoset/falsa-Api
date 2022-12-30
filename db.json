@@ -1,0 +1,38 @@
+{
+    "users":[
+        {
+            "id": 1,
+            "first_name": "Chelo",
+            "last_name": "Redux",
+            "email" : "chelor@chelo.com",
+            "password": "uno"
+    },
+    {
+        "id": 2,
+        "first_name": "Laila",
+        "last_name": "React",
+        "email" : "lailar@chela.com",
+        "password": "dos"
+    }
+    ],
+    "products":[
+        {
+            "id": 2,
+            "name": "Pelota",
+            "price": 149.99,
+            "category" : "Deporte"
+        },
+        {
+            "id": 3,
+            "name": "Mouse",
+            "price": 300,
+            "category" : "Electronicos"
+        },
+        {
+            "id": 4,
+            "name": "Teclado",
+            "price": 250,
+            "category" : "Electronicos"
+        }
+    ]
+}
