@@ -1,50 +1,12 @@
-// Import packages
-const express = require("express");
-const home = require("./routes/home");
-
-// Middlewares
+const express = require('express');
 const app = express();
-app.use(express.json());
+const db = require('./api/db.json')
 
-// Routes
-app.use("/home", home);
+app.use(express.jso({ extended: false}));
 
-// connection
-const port = process.env.PORT || 9001;
-app.listen(port, () => console.log(`Listening to port ${port}`));
+app.use("/api/db.json", db)
 
+const PORT = process.env.PORT || 8080;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const jsonServer = require('json-server')
-// const cors = require('cors')
-// const path = require('path')
-
-// const server = jsonServer.create()
-// const router = jsonServer.router(path.join(__dirname, 'db.json'))
-// const middlewares = jsonServer.defaults()
-
-// server.use(cors())
-// server.use(jsonServer.bodyParser)
-// server.use(middlewares)
-// server.use(router)
-
-// const PORT = 3000
-
-// server.listen(PORT, () => {
-//   console.log(`JSON Server is running on http://localhost:${PORT}`)
-// })
+app.listen(PORT, ()=> console.log (`Servidor en funcionamiento en el puerto ${PORT}`))
+module.exports = app
